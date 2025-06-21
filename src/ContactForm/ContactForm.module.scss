@@ -1,0 +1,45 @@
+@use '../styles/vars.scss' as *;
+
+
+.formSection {
+   
+    align-items: center;
+    text-align: center;
+    padding: $gap-16;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+      &:hover {
+          transition: background-color 0.3s ease, color 0.3s ease;
+          transform: scale(1.05);
+          color: $accent-color;
+        }
+}
+
+
+.input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0 !important;
+
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+}
+
+.buttonStyle {
+    background-color: $accent-color;
+    padding: $gap-8 $gap-32;
+    color: $primary-color;
+    border: none;
+    font-size: $font-size-18;
+  }

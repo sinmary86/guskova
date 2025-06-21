@@ -1,0 +1,49 @@
+@use '../styles/vars.scss' as *;
+
+.navContainer {
+  padding: $gap-16 $gap-64;
+  background-color: $primary-color !important;
+}
+
+:global(.navbar-toggler) {
+  border: none;
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &.active {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.offcanvas {
+  text-align: center;
+}
+
+.navLinks {
+  gap: $gap-16;
+   
+ :global(.nav-link) {
+    color: #000; 
+    transition: color 0.3s ease;
+   
+  &:hover,
+  &:focus,
+  &.active {
+    color: $accent-color;
+  }
+  }
+  }
+
+ @media (max-width: 768px) {
+ .navContainer {
+   padding: $gap-8 $gap-32;
+ }
+}
+
+@media (max-width: 468px) {
+ .navContainer {
+   padding: $gap-4 $gap-16;
+ }
+}

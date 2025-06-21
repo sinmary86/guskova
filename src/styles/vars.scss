@@ -1,0 +1,29 @@
+    //colors
+   $primary-color: #ffff;
+   $secondary-color: #F7F7F7;
+   $accent-color: #650303;
+   $text-color: #222222;
+
+    //fonts
+    $font-deco: 'Caravan', sans-serif; 
+    $font-text: 'Brygada 1918', sans-serif;
+
+    //font size
+    $font-size-14: 0.875rem;
+    $font-size-16: 1rem;
+    $font-size-18: 1.125rem;
+    $font-size-20: 1.25rem;
+    $font-size-22: 1.375rem; 
+    $font-size-24: 1.5rem;
+    
+    //gap
+    $gap-4: 0.25rem;
+    $gap-8: 0.5rem;
+    $gap-16: 1rem;
+    $gap-24: 1.5rem;
+    $gap-32: 2rem;
+    $gap-48: 3rem;
+    $gap-64: 4rem;
+
+    // layout
+    $full-height: calc(100vh - 60px);

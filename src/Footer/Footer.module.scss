@@ -1,0 +1,26 @@
+@use '../styles/vars.scss' as *;
+
+.footer {
+  background-color: $secondary-color;
+  padding: $gap-16 $gap-64;
+
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .copyright {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  h5 {
+    font-family: $font-deco;
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+}
