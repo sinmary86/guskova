@@ -5,6 +5,7 @@ import styles from './VideoSection.module.scss';
 import { useRef } from 'react';
 
 export const VideoSection = () => {
+  
   const sliderRef = useRef(null);
 
   const settings = {
@@ -29,52 +30,50 @@ export const VideoSection = () => {
     return match ? `https://img.youtube.com/vi/${match[1]}/mqdefault.jpg` : '';
   };
 
- 
+  return(
+    <section className={styles.section}>
 
-    return(
-        <section className={styles.videoSection}>
+      <div className={styles.header}>
+        <h2>ВИДЕО И КЛИПЫ</h2>
+      </div>
 
-            <div className={styles.header}>
-                <h2>ВИДЕО И КЛИПЫ</h2>
-            </div>
-
-
-            
-            <div className={`${styles.container} d-flex justify-content-between align-items-center}`}>
-          <button
-            className={styles.chevronBtn}
+      <div className={`${styles.container} d-flex justify-content-between align-items-center}`}>
+         <button
+            className="arrowsBtn"
             onClick={() => sliderRef.current?.slickPrev()}
-          >
-            <ChevronLeft size={40}/>
+            >
+            <ChevronLeft/>
           </button>
+
           <button
-            className={styles.chevronBtn}
+            className="arrowsBtn"
             onClick={() => sliderRef.current?.slickNext()}
-          >
-            <ChevronRight size={40} />
+            >
+            <ChevronRight/>
           </button>
-        </div>
+      </div>
 
 
      <Slider ref={sliderRef} {...settings}>
-  {videos.map((video) => (
-    <div key={video.id} className={styles.container}>
-      <div className={`${styles.card} position-relative`}>
-        <img
-          src={getThumbnail(video.url)}
-          alt="YouTube thumbnail"
-          className="img-fluid w-100"
-        />
-        <a
-          href={video.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="position-absolute top-50 start-50 translate-middle"
-        >
-          <PlayCircle size={60} className={styles.playIcon} />
-        </a>
+      {videos.map((video) => (
+        <div key={video.id} className={styles.container}>
+        <div className="card">
+          <img
+            src={getThumbnail(video.url)}
+            alt={video.title}
+            className="w-100"
+          />
+          <a
+            href={video.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="position-absolute top-50 start-50 translate-middle"
+          >
+            <PlayCircle className="playBtn" />
+          </a>
+        {/* <h4 className="mt-5">Видеоклип "{video.title}"</h4> */}
       </div>
-    </div>
+      </div>
   ))}
 </Slider>
  

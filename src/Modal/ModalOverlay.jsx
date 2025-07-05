@@ -11,7 +11,7 @@ export const ModalOverlay = ({ show, onClose, activeKey }) => {
       onHide={onClose}
       dialogClassName={`modal-dialog-scrollable ${styles.modalWide}`}
       centered
-      className={styles.modal}
+      className={`${styles.modal} ${activeKey === 'success' ? styles.successModal : ''}`}
       aria-labelledby="custom-modal-title"
     >
       <Modal.Header closeButton>

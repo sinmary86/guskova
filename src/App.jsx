@@ -1,13 +1,14 @@
-import { MainSection } from "./MainSection/MainSection";
+import { MainSection } from "./MainComponents/MainSection/MainSection";
 import { NavbarApp } from "./Navbar/NavbarApp";
 import { AboutSection } from "./AboutSection/AboutSection"
 import { DecoSection } from "./DecoSection/DecoSection";
 import { TennisSection } from "./TennisSection/TennisSection";
-import { ContactSection } from "./ContactSection/ContactSection";
+import { ContactSection } from "./ContactComponents/ContactSection/ContactSection";
 import { FooterSection } from "./Footer/Footer";
 import { PerformanceSection } from "./Performance/PerfomanceSection";
 import { AudioSection } from "./AlbumSection/AudioSection";
 import { VideoSection } from "./VideoSection/VideoSection";
+
 
 function App() {
   
@@ -17,10 +18,10 @@ function App() {
     <NavbarApp />
     <MainSection />
     <AboutSection />
-    <AudioSection />
+    <AudioSection /> 
     <DecoSection />
-    <VideoSection />
     <PerformanceSection />
+    <VideoSection />
     <TennisSection />
     <ContactSection />
     <FooterSection />

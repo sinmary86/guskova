@@ -18,24 +18,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: $gap-64;
-    
-  h3 {
-    color: $primary-color;
+    padding: $gap-64; 
+
+    @media (max-width: 992px) {  
+      width: 60%;
+    }
+
+    @media (max-width: 768px) {
+      padding: $gap-32;
+    }
+     @media (max-width: 468px) {
+      padding: $gap-16;
+    }
   }
 }
-}
-
-@media (max-width: 768px) {
-  .section {
-    height: 50vh;
-    
-    .contentContainer {
-    width: 45%;
-    padding: $gap-16;
-    
-  }
-  }
-  }
-
-

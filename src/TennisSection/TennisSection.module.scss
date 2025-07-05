@@ -1,26 +1,67 @@
 @use '../styles/vars.scss' as *;
 
- @use '../styles/vars.scss' as *;
-
 .sectionTennis {
+  scroll-margin-top: $gap-64;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden; 
   background-color: #c6c6c6;
-}
-
-.image {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  display: block;
+  
+  @media (max-width: 768px) {
+    scroll-margin-top: $gap-32;
+    flex-direction: column;
+  }
 }
 
 .contentCol {
- 
-  padding: $gap-64;
+   padding: $gap-64 0 $gap-64 $gap-64;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   @media (max-width: 991px) {
+    width: 100%;
+    order: 1;
+    padding: $gap-64;
+  }
 
   @media (max-width: 768px) {
-    padding: $gap-32 $gap-16;
+    padding: $gap-32;
   }
+
+  @media (max-width: 468px) {
+    padding: $gap-16;
+  }
+}
+
+.imageCol {
+  width: 50%;
+  min-height: 500px;
+
+  @media (max-width: 992px) {
+    width: 100%;
+    order: 2;
+    min-height: 300px;
+  }
+
+   img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+
+.header {
+  padding-bottom: $gap-8;
+
+  
+  @media (max-width: 768px) {
+    padding: $gap-8;
+  }
+
 }

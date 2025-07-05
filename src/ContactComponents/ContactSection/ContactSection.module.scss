@@ -1,17 +1,21 @@
-@use '../styles/vars.scss' as *;
+@use '../../styles/vars.scss' as *;
 
 .contactSection {
-  width: 100%;
-  height: 90vh;
+  min-height: 100vh;
+  scroll-margin-top: $gap-32;
   display: flex;
   align-items: center;
-  padding: $gap-64;
+  padding-left: $gap-64;
+  padding-right: $gap-64;
 
   .row {
-    width: 100%;
-    height: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: $gap-32;
+    padding-right: $gap-32;
   }
 
  .textCol {
@@ -23,6 +27,7 @@
     text-align: center;
     background-color: $accent-color;
     padding: $gap-16;
+    
 }
 
   .icon {
@@ -39,4 +44,4 @@
     a, p {
         color: $primary-color;
     } 
-}
+  }

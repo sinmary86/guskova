@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { ModalOverlay } from '../Modal/ModalOverlay';
-import Col from 'react-bootstrap/Col';
+import { ModalOverlay } from '../../Modal/ModalOverlay';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import styles from './ContactForm.module.scss';
 
 //TODO - заменить данные пароля на клиента https://formcarry.com/
+//TODO - добавить ссылку на яндекс музыку + дзен + иконки
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -52,14 +52,12 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className={`d-flex flex-column gap-4 ${styles.formSection}`}>
-    <div className={`mb-3 text-start ${styles.text}`}>
-    <h4>Оставьте свои контактные данные, и мы перезвоним 
-вам в течении 24 часов</h4>
-     </div>
-    <Form onSubmit={onSubmit} className="d-flex flex-column gap-4">
-          <Form.Group as={Col} controlId="formGridName" className="d-flex align-items-center gap-2">
-          <Form.Label className={styles.label}>Ваше имя:</Form.Label>
+    <Form onSubmit={onSubmit} className={`mx-auto ${styles.form}`}>
+        <h4 className={`text-center ${styles.title}`}>
+          Оставьте свои контактные данные и мы перезвоним Вам в течении 24 часов</h4>
+  
+          <Form.Group controlId="formGridName" className="d-flex justify-content-between align-items-center">
+          <Form.Label className={`text-end ${styles.label}`}>Ваше имя:</Form.Label>
           <Form.Control
             type="text"
             value={name}
@@ -69,7 +67,7 @@ export const ContactForm = () => {
           />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridEmail" className="d-flex align-items-center gap-2">
+        <Form.Group controlId="formGridEmail" className="d-flex justify-content-between align-items-center">
           <Form.Label className={styles.label}>Ваш email:</Form.Label>
           <Form.Control
             type="email"
@@ -80,7 +78,7 @@ export const ContactForm = () => {
           />
         </Form.Group>
 
-      <Form.Group className="d-flex align-items-center gap-2" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className="d-flex justify-content-between align-items-center" controlId="exampleForm.ControlTextarea1">
         <Form.Label className={styles.label}>Сообщение:</Form.Label>
         <Form.Control
           as="textarea"
@@ -92,7 +90,7 @@ export const ContactForm = () => {
         />
       </Form.Group>
 
-      <Form.Group className="mb-3 text-start" id="formGridCheckbox">
+      <Form.Group className="text-start" id="formGridCheckbox">
         <Form.Check
             type="checkbox"
             className={styles.span}
@@ -121,8 +119,8 @@ export const ContactForm = () => {
         <Alert variant="danger">Пожалуйста, согласитесь с политикой конфиденциальности.</Alert>
       )}
 
-      <div className="text-start">
-  <button type="submit" className={styles.buttonStyle}>
+      <div className="text-center">
+  <button type="submit" className="btnMain">
     Отправить
   </button>
 </div>
@@ -131,6 +129,5 @@ export const ContactForm = () => {
                     onClose={() => setShowModal(false)}
                     activeKey={activeModalKey} />
     </Form>
-   </div>
   );
 };

@@ -6,6 +6,7 @@
 
   a {
     color: black;
+    font-size: 18px;
 
     &:hover {
       text-decoration: underline;
@@ -13,14 +14,13 @@
   }
 
   .copyright {
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 400;
+    font-size: 22px;
   }
 
-  h5 {
+  .quote {
     font-family: $font-deco;
-    font-size: 3rem;
-    font-style: italic;
-    margin-bottom: 0.5rem;
+    font-size: 60px;
+    color: $text-color;
   }
 }

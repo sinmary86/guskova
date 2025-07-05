@@ -2,42 +2,45 @@ import { Col, Row } from 'react-bootstrap';
 import styles from './Footer.module.scss';
 
 export const FooterSection = () => {
+
+  const currentYear = new Date().getFullYear();
+  const copyrightYear =
+    currentYear === 2025
+      ? '2025'
+      : `2025–${currentYear}`;
+
     return(
 
     <footer className={`${styles.footer}`}>
        
-       
-       
-          <Row>
+          <Row className="gy-4"> 
 
-            <Col>
-            <h6 className="copyright mb-1">© 2025 НАДЕЖДА ГУСЬКОВА. Все права защищены.</h6>
+            <Col xs={12} lg={8}>
+            <h6 className={styles.copyright}>© {copyrightYear} НАДЕЖДА ГУСЬКОВА. Все права защищены.</h6>
            
            <Row>
-            <Col>
-            <ul className="list-unstyled">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Биография</a></li>
-              <li><a href="#">Дискография</a></li>
-            </ul>
-
+            <Col xs={6} className="d-flex flex-column gap-1">
+           
+              <a href="#mainSection">Главная</a>
+              <a href="#aboutSection">Биография</a>
+              <a href="#audioSection">Дискография</a>
+        
             </Col>
-             <Col>   
-            <ul className="list-unstyled">
-              <li><a href="#">Выступления</a></li>
-              <li><a href="#">Теннис</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
+             <Col xs={6} className="d-flex flex-column gap-1">   
+              <a href="#performanceSection">Выступления</a>
+              <a href="#tennisSection">Теннис</a>
+              <a href="#contactSection">Контакты</a>
             </Col> 
             </Row>
+
             </Col>
           
-          <Col>
-                   <h5 className="slogan">Голос, который тронет сердце</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">Политика конфиденциальности</a></li>
-              <li><a href="#">Пользовательское соглашение</a></li>
-            </ul>
+          <Col xs={12} lg={4} className="d-flex flex-column align-items-center gap-3">
+              <h5 className={styles.quote}>Голос, который тронет сердце</h5>
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Согласие на обработку персональных данных</a>
+              {/* <a href="#">Пользовательское соглашение</a> */}
+        
           </Col>
          </Row>
     </footer>

@@ -1,102 +1,26 @@
 @use '../styles/vars.scss' as *;
 
-.header {
-  padding: $gap-16;
-  background: linear-gradient(to bottom, #fff 50%, #f5f5f5 50%);
+.section {
+  background-color: $primary-color;
+  padding-bottom: $gap-64;
+    
+  @media (max-width: 768px) {
+   padding-bottom: $gap-32;
+ }
 }
 
-.videoSection {
-  background-color: $secondary-color;
-  min-height: 90vh;
+.header {
+  background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 50%);
 }
 
 .container {
   padding: $gap-16 $gap-64;
-}
-
-.videoCard {
-  // max-width: 714px;
-  // max-height: 472px;
-  width: 100%;
-  width: 100%;
-  position: relative; 
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-  }
-
-  a {
-    z-index: 2;
-    position: relative;
-  }
-}
-
-.playIcon {
-  color: white;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.5);
-  }
-}
-
-.chevronBtn {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    transform: scale(1.3);
-  }
-}
-
-@media (max-width: 768px) {
-  .videoSection {
-  min-height: 60vh;
-
-  .header {
-  padding: $gap-16;
-}
   
-  .videoBlock {
-  padding: $gap-4 $gap-32;
+  @media (max-width: 768px) {
+  padding: $gap-16 $gap-32;
  }
-  .videoCard {
-    margin: 0 auto;
-    max-width: 90%;
-  }
 
-  .chevronBtn {
-    padding: 0.3rem;
-  }
-}
-}
-
-@media (max-width: 468px) {
-  .videoSection {
-  min-height: 50vh;
-
-  .header {
-  padding: $gap-8;
-}
-  
-  .container {
-  padding: $gap-4 $gap-16;
+  @media (max-width: 468px) {
+  padding: $gap-8 $gap-16;
  }
-  .videoCard {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-
-  .chevronBtn {
-    padding: 0.3rem;
-  }
-}
 }

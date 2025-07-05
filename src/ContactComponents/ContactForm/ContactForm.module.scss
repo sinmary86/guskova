@@ -1,12 +1,22 @@
-@use '../styles/vars.scss' as *;
+@use '../../styles/vars.scss' as *;
 
 
-.formSection {
-   
-    align-items: center;
-    text-align: center;
+ .form {
+     display: flex;
+     flex-direction: column;
+     gap: $gap-32;
+     padding: $gap-64 0 $gap-64 $gap-64;
+
+      @media (max-width: 768px) {
+    padding: $gap-32;
+    gap: $gap-8;
+  }
+
+  @media (max-width: 480px) {
     padding: $gap-16;
-}
+    gap: $gap-8;
+  }
+ }
 
 .link {
   text-decoration: underline;
@@ -18,12 +28,12 @@
         }
 }
 
-
 .input {
   background-color: transparent !important;
   border: none !important;
   border-bottom: 1px solid black !important;
   border-radius: 0 !important;
+  width: 75%;
 
   &:hover,
   &:focus {
@@ -35,11 +45,3 @@
     color: rgba(255, 255, 255, 0.6) !important;
   }
 }
-
-.buttonStyle {
-    background-color: $accent-color;
-    padding: $gap-8 $gap-32;
-    color: $primary-color;
-    border: none;
-    font-size: $font-size-18;
-  }

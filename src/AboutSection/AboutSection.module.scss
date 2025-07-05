@@ -1,35 +1,46 @@
 @use '../styles/vars.scss' as *;
 
 .aboutSection {
+  scroll-margin-top: $gap-64;
   background-color: $secondary-color;
   padding: calc($gap-64 + 2.5rem) $gap-64 $gap-64 $gap-64;
-@media (max-width: 768px) {
-    padding: $gap-32;
+
+  @media (max-width: 768px) {
+    scroll-margin-top: $gap-32;
+    padding: $gap-16 $gap-32;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $gap-32; 
-  }}
-
-@media (max-width: 480px) {
-  .aboutSection {
-    padding: $gap-16;
     gap: $gap-16;
   }
-}
 
-
-.header {
-  padding-bottom: $gap-16;
-  text-align: left;
-  margin-top: -2.5rem; 
-  
-  @media (max-width: 768px) {
-    margin: 0;
-    padding-bottom: 0;
+  @media (max-width: 468px) {
+    padding: $gap-16;
+    gap: $gap-8;
   }
 }
 
+.header {
+  text-align: left;
+  margin-top: -3.5rem;
+
+   @media (max-width: 1200px) {
+    margin-top: -3rem;
+   }
+
+  @media (max-width: 1092px) {
+    margin-top: -2.9rem;
+  }
+
+   @media (max-width: 860px) {
+    margin-top: -2.1rem;
+  } 
+
+  @media (max-width: 768px) {
+    margin: 0;
+    padding-bottom: $gap-4;
+  }
+}
 
 .photoWrapper {
   float: right;
@@ -38,6 +49,7 @@
   max-width: 500px;
   margin: 0 0 1rem 5rem;
   display: block;
+  border: 1px solid rgb(33, 33, 134);
 
   img {
     display: block;
@@ -60,7 +72,7 @@
     z-index: 1;
   }
 
-@media (max-width: 1200px) {
+  @media (max-width: 1200px) {
     max-width: 420px;
 
     &::before {
@@ -70,7 +82,8 @@
   }
 
   @media (max-width: 992px) {
-    max-width: 360px;
+    max-width: 320px;
+    margin: 0 0 1rem 3rem;
 
     &::before {
       top: -1.5rem;
@@ -79,14 +92,28 @@
   }
 
   @media (max-width: 768px) {
+    max-width: 500px;
     float: none;
     order: 3;
-    margin: 0 auto;
+    margin: $gap-16 auto;
+    
 
     &::before {
-      top: -1rem;
-      left: -1rem;
-    }
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+      background-color: $accent-color;
+      z-index: 1;
+      }
+  }
+
+   @media (max-width: 598px) {
+    max-width: 390px;
+  }
+
+   @media (max-width: 420px) {
+    max-width: 300px;
   }
 }
-

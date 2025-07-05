@@ -43,7 +43,7 @@ export const audios = [
   { id: 3, 
     img: zaZashitnikov,
     alt: 'Песня За зашитников нашей страны',
-    title: 'За защитников нашей страны',
+    title: 'За защитников',
     url: 'https://music.yandex.com/album/30972865?utm_source=web&utm_medium=copy_link' 
 },
 { id: 4, 

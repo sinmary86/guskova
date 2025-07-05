@@ -1,0 +1,50 @@
+@use '../../styles/vars.scss' as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.svg {
+  width: 137px;
+  height: 137px;
+}
+
+.circleText {
+  font-size: $font-size-22;
+  fill: $text-color;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.centerNumber {
+  font-size: 150px;
+  font-weight: bold;
+  font-family: $font-text;
+}
+
+@media (max-width: 768px) {
+  .svg {
+  width: 100px;
+  height: 100px;
+}
+}
+
+@media (max-width: 480px) {
+  .svg {
+  width: 85px;
+  height: 85px;
+}
+}
+
+
+@media (max-width: 320px) {
+  .svg {
+  width: 75px;
+  height: 75px;
+}
+}
+  

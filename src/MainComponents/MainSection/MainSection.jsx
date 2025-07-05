@@ -1,14 +1,16 @@
 import styles from './MainSection.module.scss';
-import experience from '../assets/12years.png';
+import { ExperienceCircle } from '../ExperienceCircle/ExperienceCircle';
+import '../../styles/button.scss';
+
 
 
 export const MainSection = () => {
     return(
-      <section className={styles.mainSection}>
+      <section id="mainSection" className={styles.mainSection}>
             <div className={styles.contentContainer}> 
 
             <div className={styles.headerBlock}>
-                <img src={experience} className={styles.experience} alt="12 лет опыта" />
+                <ExperienceCircle />
                 <h3>Singer</h3>
             </div>
 
@@ -16,7 +18,7 @@ export const MainSection = () => {
                 ГУСЬКОВА
             </h1>
 
-            <button className={styles.btn}>ЗАКАЗАТЬ ВЫСТУПЛЕНИЕ</button>
+            <button className="btnMain">ЗАКАЗАТЬ ВЫСТУПЛЕНИЕ</button>
         </div>
         </section>
     )

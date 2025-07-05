@@ -1,1 +1,25 @@
 @use './vars.scss' as *;
+
+.section {
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+  min-height: 60vh;
+}
+
+@media (max-width: 468px) {
+  min-height: 40vh;
+}
+}
+
+// .container {
+//   padding: $gap-16 $gap-32;
+
+// @media (max-width: 768px) {
+//   padding: $gap-8 $gap-32;
+//  }
+  
+// @media (max-width: 468px) {
+//   padding: $gap-8 $gap-16;
+// }
+// }

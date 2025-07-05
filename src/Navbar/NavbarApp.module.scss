@@ -3,12 +3,21 @@
 .navContainer {
   padding: $gap-16 $gap-64;
   background-color: $primary-color !important;
+
+  @media (max-width: 768px) {
+   padding: $gap-8 $gap-32;
+ }
+
+  @media (max-width: 468px) {
+   padding: $gap-4 $gap-16;
+ }
 }
 
 :global(.navbar-toggler) {
   border: none;
   box-shadow: none;
-
+  padding: 0;
+  
   &:hover,
   &:focus,
   &.active {
@@ -17,16 +26,18 @@
   }
 }
 
-.offcanvas {
-  text-align: center;
+:global(.navbar-toggler-icon) {
+  display: none;
 }
 
-.navLinks {
+.navLinksContainer {
   gap: $gap-16;
    
  :global(.nav-link) {
-    color: #000; 
     transition: color 0.3s ease;
+    padding-right: 0;
+    margin-right: 0;
+    color: black;
    
   &:hover,
   &:focus,
@@ -36,14 +47,4 @@
   }
   }
 
- @media (max-width: 768px) {
- .navContainer {
-   padding: $gap-8 $gap-32;
- }
-}
-
-@media (max-width: 468px) {
- .navContainer {
-   padding: $gap-4 $gap-16;
- }
-}
+ 
