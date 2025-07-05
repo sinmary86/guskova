@@ -1,28 +1,31 @@
 @use './vars.scss' as *;
 
 h1 {
-    font-size: 86px;
+    font-size: 100px;
 
   @media (max-width: 1064px) {
-    font-size: 70px;
+    font-size: 86px;
   } 
   @media (max-width: 960px) {
-    font-size: 56px;
+    font-size: 76px;
   }
   @media (max-width: 860px) {
-    font-size: 48px;
+    font-size: 66px;
   } 
   @media (max-width: 768px) {
-    font-size: 38px;
+    font-size: 50px;
+  }
+  @media (max-width: 638px) {
+    font-size: 44px;
   }
   @media (max-width: 548px) {
-    font-size: 32px;
+    font-size: 36px;
   } 
   @media (max-width: 480px) {
-    font-size: 24px;
+    font-size: 26px;
   }  
   @media (max-width: 340px) {
-     font-size: 20px;
+     font-size: 24px;
   } 
 }
 

@@ -18,7 +18,7 @@ export const MainSection = () => {
                 ГУСЬКОВА
             </h1>
 
-            <button className="btnMain">ЗАКАЗАТЬ ВЫСТУПЛЕНИЕ</button>
+            <button className="btnMain btnMain--fullWidth">ЗАКАЗАТЬ ВЫСТУПЛЕНИЕ</button>
         </div>
         </section>
     )
