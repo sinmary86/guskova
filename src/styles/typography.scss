@@ -1,7 +1,8 @@
 @use './vars.scss' as *;
 
 h1 {
-    font-size: 100px;
+  font-size: 100px;
+  font-family: $font-title;
 
   @media (max-width: 1064px) {
     font-size: 86px;
@@ -32,6 +33,7 @@ h1 {
 h2 {
   font-size: 60px;
   text-align: center;
+  font-family: $font-title;
 
   @media (max-width: 1064px) {
     font-size: 50px;
@@ -47,7 +49,7 @@ h2 {
   }
  
   @media (max-width: 480px) {
-    font-size: 30px;
+    font-size: 28px;
   }  
   @media (max-width: 340px) {
      font-size: 24px;
@@ -84,8 +86,9 @@ h3 {
 h4 {
   font-size: 30px;
   text-align: center;
-  text-transform: uppercase;
   padding-top: $gap-32;
+  font-family: $font-title;
+  text-transform: uppercase;
 
   @media (max-width: 768px) {
       font-size: 24px;
@@ -108,31 +111,65 @@ h5 {
    @media (max-width: 860px) {
       font-size: 90px;
    }
-   @media (max-width: 640px) {
-    font-size: 76px;
+   @media (max-width: 768px) {
+      font-size: 84px;
+   }
+   @media (max-width: 660px) {
+    font-size: 78px;
   }
    @media (max-width: 580px) {
-    font-size: 64px;
+    font-size: 68px;
   }
-  // @media (max-width: 512px) {
-  //   font-size: 60px;
-  // }
-  //  @media (max-width: 485px) {
-  //   font-size: 60px;
-  // }
-  @media (max-width: 400px) {
-    font-size: 58px;
+   @media (max-width: 512px) {
+     font-size: 64px;
+   }
+    @media (max-width: 486px) {
+     font-size: 62px;
+   }
+  @media (max-width: 460px) {
+    font-size: 60px;
   } 
+    @media (max-width: 446px) {
+    font-size: 56px;
+  } 
+   @media (max-width: 420px) {
+    font-size: 52px;
+  }
+   @media (max-width: 395px) {
+    font-size: 46px;
+  }
+   @media (max-width: 356px) {
+    font-size: 40px;
+  }
+   @media (max-width: 356px) {
+    font-size: 36px;
+  }
+}
+
+h6 {
+  font-size: 30px;
+  text-align: center;
+  font-family: $font-text;
+  padding-bottom: $gap-32;
+
+  @media (max-width: 768px) {
+      font-size: 24px;
+    }
 }
 
 p {
   font-size: $font-size-18;
   line-height: 1.6;
   text-align: left;
+  font-family: $font-text;
 
   @media (max-width: 768px) {
     font-size: $font-size-16;
     }
+  }
+
+  a {
+    font-family: $font-text;
   }
 
 

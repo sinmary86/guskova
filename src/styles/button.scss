@@ -9,6 +9,7 @@
   padding: $gap-8 $gap-16;
   transition: all 0.3s ease;
   display: inline-block;
+  align-self: center;
 
   &:hover {
     background-color: color.adjust($accent-color, $lightness: -10%);

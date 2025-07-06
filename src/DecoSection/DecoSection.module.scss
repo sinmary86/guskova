@@ -30,10 +30,16 @@
     }
 
     @media (max-width: 768px) {
+      width: 55%;
       padding: $gap-32;
     }
-     @media (max-width: 468px) {
-      padding: $gap-16;
+
+    @media (max-width: 580px) {
+      width: 60%;
+    }
+     @media (max-width: 486px) {
+      padding: $gap-32 $gap-16;
+      width: 55%;
     }
   }
 }

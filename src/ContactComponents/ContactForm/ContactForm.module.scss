@@ -1,21 +1,34 @@
 @use '../../styles/vars.scss' as *;
 
 
+ .container {
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: $gap-64 0 $gap-64 $gap-64;
+    
+
+    @media (max-width: 768px) {
+      height: auto;
+      padding: $gap-32;
+   }
+
+  @media (max-width: 480px) {
+    padding: $gap-16;
+  }
+ }
+
  .form {
      display: flex;
      flex-direction: column;
      gap: $gap-32;
-     padding: $gap-64 0 $gap-64 $gap-64;
 
-      @media (max-width: 768px) {
-    padding: $gap-32;
-    gap: $gap-8;
+    @media (max-width: 768px) {
+      gap: $gap-16;
   }
 
-  @media (max-width: 480px) {
-    padding: $gap-16;
-    gap: $gap-8;
-  }
  }
 
 .link {
@@ -43,5 +56,47 @@
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6) !important;
+  }
+}
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  input[type='checkbox'] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $text-color;
+    box-shadow: 0 0 4px rgba(128, 0, 0, 0.6);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    &:hover {
+      box-shadow: $accent-color;
+    }
+
+    &:checked {
+      background-color: $accent-color;
+      border-color: $accent-color;
+      box-shadow: 0 0 4px rgba(128, 0, 0, 0.6);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 4px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        box-shadow: 0 0 4px rgba(128, 0, 0, 0.6);
+      }
+    }
   }
 }

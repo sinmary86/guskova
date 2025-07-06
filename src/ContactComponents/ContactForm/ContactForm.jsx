@@ -52,10 +52,11 @@ export const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={onSubmit} className={`mx-auto ${styles.form}`}>
-        <h4 className={`text-center ${styles.title}`}>
-          Оставьте свои контактные данные и мы перезвоним Вам в течении 24 часов</h4>
   
+    <div className={styles.container}>
+        <h6>Оставьте свои контактные данные и мы свяжемся с Вами в кратчайшие сроки!</h6>
+        
+        <Form onSubmit={onSubmit} className={`${styles.form}`}>
           <Form.Group controlId="formGridName" className="d-flex justify-content-between align-items-center">
           <Form.Label className={`text-end ${styles.label}`}>Ваше имя:</Form.Label>
           <Form.Control
@@ -93,7 +94,7 @@ export const ContactForm = () => {
       <Form.Group className="text-start" id="formGridCheckbox">
         <Form.Check
             type="checkbox"
-            className={styles.span}
+            className={styles.checkbox}
             checked={agreed}
             onChange={(e) => setAgreed(e.target.checked)}
             label={
@@ -119,15 +120,14 @@ export const ContactForm = () => {
         <Alert variant="danger">Пожалуйста, согласитесь с политикой конфиденциальности.</Alert>
       )}
 
-      <div className="text-center">
   <button type="submit" className="btnMain">
-    Отправить
+    ОТПРАВИТЬ СООБЩЕНИЕ
   </button>
-</div>
 
       <ModalOverlay show={showModal}
                     onClose={() => setShowModal(false)}
                     activeKey={activeModalKey} />
-    </Form>
+      </Form>
+      </div>
   );
 };
