@@ -1,6 +1,5 @@
 import styles from './TennisSection.module.scss';
 import tennisCover from '../assets/tennis.png'
-import { Col, Row } from 'react-bootstrap';
 
 //TODO - заменить фото
 
