@@ -6,7 +6,11 @@
 
   
     @media (max-width: 768px) {
-      padding: $gap-16 $gap-32;
+      padding: $gap-32;
+    }
+
+    @media (max-width: 468px) {
+      padding: $gap-16;
     }
 
   a {
@@ -43,7 +47,7 @@
     }
     
     @media (max-width: 468px) {
-    padding: $gap-16;
+    padding: $gap-16 0;
   }
   }
   
