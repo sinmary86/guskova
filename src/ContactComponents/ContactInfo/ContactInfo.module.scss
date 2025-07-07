@@ -19,6 +19,14 @@
   }
 }
 
+.text {
+    width: 75%;
+
+    @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
  .linksCol {
     display: flex;
     flex-direction: column;
