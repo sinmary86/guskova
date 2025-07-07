@@ -1,28 +1,32 @@
-import russiaImg from '../assets/russia.jpg';
-import dvaKrilaImg from '../assets/dvakrila.jpg';
-import zaZashitnikov from '../assets/zaZashitnikov.jpg';
-import kraiRodnoi from '../assets/kraiRodnoi.jpg';
-import noviiGod from '../assets/noviiGod.jpg';
-import krasnayaPomada from '../assets/krasnayaPomada.jpg';
-import glupoeSerdze from '../assets/glupoeSerdze.jpg';
-import esli from '../assets/esli.jpg';
-import indigo from '../assets/indigo.jpg';
-import kakTvoiDela from '../assets/kakTvoiDela.jpg';
-import megapolis from '../assets/megapolis.jpg';
-import mnogoShuma from '../assets/mnogoShuma.jpg';
-import naDvoich from '../assets/naDvoich.jpg';
-import nashiSerdza from '../assets/nashiSerdza.jpg';
-import neVeritsya from '../assets/neVeritsya.jpg';
-import origami from '../assets/origami.jpg';
-import pozpoz from '../assets/pozpoz.jpg';
-import schastie from '../assets/schastie.jpg';
-import selyavi from '../assets/selyavi.jpg';
-import tebyaNet from '../assets/tebyaNet.jpg';
-import yaRyadom from '../assets/yaRyadom.jpg';
-import zima from '../assets/zima.jpg';
-import znala from '../assets/znala.jpg';
-import mama from '../assets/lubimayaMama.jpg';
-
+import russiaImg from '../assets/россия.jpg';
+import dvaKrilaImg from '../assets/два-белых-крыла.jpg';
+import zaZashitnikov from '../assets/за-защитников-нашей-страны.jpg';
+import kraiRodnoi from '../assets/край-родной.jpg';
+import noviiGod from '../assets/новый-год.jpg';
+import krasnayaPomada from '../assets/помада-красная.jpg';
+import glupoeSerdze from '../assets/глупое-сердце.jpg';
+import esli from '../assets/если-не-будет-лета.jpg';
+import indigo from '../assets/индиго.jpg';
+import kakTvoiDela from '../assets/как-твои-дела.jpg';
+import megapolis from '../assets/мегаполис.jpg';
+import mnogoShuma from '../assets/много-шума.jpg';
+import naDvoich from '../assets/на-двоих.jpg';
+import nashiSerdza from '../assets/наши-сердца.jpg';
+import neVeritsya from '../assets/не-верится.jpg';
+import origami from '../assets/оригами.jpg';
+import pozpoz from '../assets/поц-поц.jpg';
+import schastie from '../assets/счастье-любит-тишину.jpg';
+import selyavi from '../assets/селяви.jpg';
+import tebyaNet from '../assets/тебя-ведь-нет.jpg';
+import yaRyadom from '../assets/я-рядом.jpg';
+import zima from '../assets/когда-придет-зима.jpg';
+import znala from '../assets/знала.jpg';
+import mama from '../assets/любимая-мама.jpg';
+import asteroid from '../assets/астеройд.jpg';
+import carusel from '../assets/карусель.jpg';
+import chestno from '../assets/честно.jpg';
+import chrustal from '../assets/хрусталь.jpg';
+import derzhiMenyaKrepche from '../assets/держи-меня-крепче.jpg';
 
 //TODO - ссылки заменить и проверить с 7 по 17, 19 - 23 + очередность
 
@@ -34,12 +38,12 @@ export const audios = [
     title: 'Россия',
     url: 'https://music.yandex.com/album/22357269?utm_source=web&utm_medium=copy_link' 
 },
-  { id: 2, 
-    img: dvaKrilaImg,
-    alt: 'Песня Два белых крыла',
-    title: 'Два белых крыла',
-    url: 'https://music.yandex.com/album/24018294?utm_source=web&utm_medium=copy_link' 
-},
+{ id: 2, 
+    img: kraiRodnoi,
+    alt: 'Песня Край родной',
+    title: 'Край родной',
+    url: 'https://music.yandex.com/album/35102553?utm_source=web&utm_medium=copy_link' 
+},  
   { id: 3, 
     img: zaZashitnikov,
     alt: 'Песня За зашитников нашей страны',
@@ -47,10 +51,10 @@ export const audios = [
     url: 'https://music.yandex.com/album/30972865?utm_source=web&utm_medium=copy_link' 
 },
 { id: 4, 
-    img: kraiRodnoi,
-    alt: 'Песня Край родной',
-    title: 'Край родной',
-    url: 'https://music.yandex.com/album/35102553?utm_source=web&utm_medium=copy_link' 
+    img: dvaKrilaImg,
+    alt: 'Песня Два белых крыла',
+    title: 'Два белых крыла',
+    url: 'https://music.yandex.com/album/24018294?utm_source=web&utm_medium=copy_link' 
 },
 { id: 5, 
     img: noviiGod,
@@ -173,5 +177,41 @@ export const audios = [
     alt: 'Песня Любимая мама',
     title: 'Любимая ама',
     url: 'https://music.yandex.com/album/31562793?utm_source=web&utm_medium=copy_link' 
+},
+{ id: 25, 
+    img: mama,
+    alt: 'Песня Любимая мама',
+    title: 'Любимая ама',
+    url: 'https://music.yandex.com/album/31562793?utm_source=web&utm_medium=copy_link' 
+},
+{ id: 26, 
+    img: asteroid,
+    alt: 'Песня Астеройд',
+    title: 'Астеройд',
+    url: '' 
+},
+{ id: 27, 
+    img: carusel,
+    alt: 'Песня Карусель',
+    title: 'Карусель',
+    url: '' 
+},
+{ id: 28, 
+    img: chestno,
+    alt: 'Песня Честно',
+    title: 'Честно',
+    url: '' 
+},
+{ id: 29, 
+    img: chrustal,
+    alt: 'Песня Хрусталь',
+    title: 'Хрусталь',
+    url: '' 
+},
+{ id: 30, 
+    img: derzhiMenyaKrepche,
+    alt: 'Песня Держи меня крепче',
+    title: 'Держи меня крепче',
+    url: '' 
 },
 ];
