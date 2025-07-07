@@ -39,14 +39,12 @@
      @media (max-width: 768px) {
       font-size: 60px;
       width: 100%;
-    }
-  }
-
-   @media (max-width: 768px) {
       padding: $gap-16 $gap-32;
     }
-
-  @media (max-width: 468px) {
-    padding: $gap-64 $gap-16 0 $gap-16;
+    
+    @media (max-width: 468px) {
+    padding: $gap-16;
   }
+  }
+  
 }
