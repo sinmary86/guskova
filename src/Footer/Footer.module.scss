@@ -4,6 +4,11 @@
   background-color: $secondary-color;
   padding: $gap-16 $gap-64;
 
+  
+    @media (max-width: 768px) {
+      padding: $gap-16 $gap-32;
+    }
+
   a {
     color: black;
 
@@ -41,8 +46,7 @@
       padding: $gap-16 $gap-32;
     }
 
-    
   @media (max-width: 468px) {
-    padding: $gap-8 $gap-16;
+    padding: $gap-32 $gap-16 0 $gap-16;
   }
 }
