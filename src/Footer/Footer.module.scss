@@ -33,7 +33,7 @@
 
      @media (max-width: 768px) {
       font-size: 60px;
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -43,6 +43,6 @@
 
     
   @media (max-width: 468px) {
-    padding: $gap-16 $gap-32;
+    padding: $gap-8 $gap-16;
   }
 }

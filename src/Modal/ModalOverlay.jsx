@@ -3,26 +3,57 @@ import styles from './Modal.module.scss';
 import { ModalData } from './ModalData';
 
 export const ModalOverlay = ({ show, onClose, activeKey }) => {
-  const content = ModalData.find(item => item.key === activeKey);
+
+  const item = ModalData.find(item => item.key === activeKey);
+
+  const moveToMain = () => {
+    onClose();
+    setTimeout(() => {
+      const section = document.getElementById('mainSection');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
 
   return (
     <Modal
       show={show}
       onHide={onClose}
-      dialogClassName={`modal-dialog-scrollable ${styles.modalWide}`}
+      dialogClassName={styles.modal}
+      contentClassName={activeKey === 'success' ? styles.successModal : ''}
       centered
-      className={`${styles.modal} ${activeKey === 'success' ? styles.successModal : ''}`}
-      aria-labelledby="custom-modal-title"
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="custom-modal-title">
-          {content?.title || 'Информация'}
-        </Modal.Title>
-      </Modal.Header>
+       <Modal.Header
+  closeButton
+  className={activeKey === 'success' ? styles.modalHeaderNoBorder : ''}
+>
+  {item?.title && <Modal.Title>{item.title}</Modal.Title>}
+</Modal.Header>
+
       <Modal.Body>
-        <p style={{ whiteSpace: 'pre-line' }}>
-          {content?.text || 'Не удалось загрузить данные для отображения.'}
-        </p>
+        {activeKey === 'success' ? (
+    <div className={`text-center ${styles.successContainer}`}>
+      <h5 className="mb-3">Спасибо!</h5>
+      <p className="text-center">
+        Ваша заявка отправлена. <br />
+        Уже очень скоро мы свяжемся с Вами!
+      </p>
+      <button
+        className="btnMain btnMain--modal"
+        onClick={moveToMain}
+      >
+        НА ГЛАВНУЮ
+      </button>
+    </div>
+  ) : (
+    item?.content || (
+      <p style={{ whiteSpace: 'pre-line' }}>
+        Не удалось загрузить данные для отображения.
+      </p>
+    )
+  )}
       </Modal.Body>
     </Modal>
   );

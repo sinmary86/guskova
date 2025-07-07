@@ -24,6 +24,22 @@
     opacity: 0.7;
   }
 
+  &--modal {
+    background-color: white;
+    color: $accent-color;
+
+    &:hover {
+      background-color: color.adjust(white, $lightness: -5%);
+      color: $accent-color;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+      background-color: white;
+      color: rgba($accent-color, 0.6);
+    }
+  }
+
    @media (max-width: 968px) {
     width: auto;
   }
