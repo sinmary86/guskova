@@ -63,7 +63,7 @@
   position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: $gap-16;
 
   input[type='checkbox'] {
     appearance: none;
@@ -100,3 +100,4 @@
     }
   }
 }
+

@@ -170,6 +170,12 @@ p {
 
   a {
     font-family: $font-text;
+    font-size: 18px;
+    line-height: 1.6;
+
+     @media (max-width: 768px) {
+    font-size: $font-size-16;
+    }
   }
 
 

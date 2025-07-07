@@ -4,29 +4,37 @@
 }
 
 .successModal {
-  background-color: #fff3f3;
+  ъъbackground-image: url('../../assets/alertCover.png');
+  background-size: cover;
+  background-position: center;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 3rem;
+  max-width: 500px !important;
+  color: white;
+  text-align: center;
 
   h5 {
-    color: #6b0000;
-    font-weight: 600;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
 
   p {
     font-size: 1rem;
-    color: #333;
+    color: white;
+    margin-bottom: 1.5rem;
   }
 
   button {
-    background-color: #6b0000;
-    color: white;
+    background-color: white;
+    color: #6b0000;
     border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
+    font-weight: 500;
+    transition: 0.3s ease;
 
     &:hover {
-      background-color: #a10000;
+      background-color: #ddd;
     }
   }
 }

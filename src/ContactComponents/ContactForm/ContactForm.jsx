@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ModalOverlay } from '../../Modal/ModalOverlay';
 import Form from 'react-bootstrap/Form';
-import Alert from 'react-bootstrap/Alert';
 import styles from './ContactForm.module.scss';
 
 //TODO - заменить данные пароля на клиента https://formcarry.com/
@@ -14,7 +13,8 @@ export const ContactForm = () => {
   const [agreed, setAgreed] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [activeModalKey, setActiveModalKey] = useState(null);
-  const [showAlert, setShowAlert] = useState(false);
+  const [validated, setValidated] = useState(false);
+  const formRef = useRef(null);
 
   const handleShowModal = (key) => {
     setActiveModalKey(key);
@@ -23,8 +23,17 @@ export const ContactForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+   
+    const form = formRef.current;
+    const isValid = form.checkValidity();
+
     if (!agreed) {
-      setShowAlert(true);
+      setValidated(true);
+      return;
+    }
+
+    if (!isValid) {
+      setValidated(true);
       return;
     }
 
@@ -43,20 +52,30 @@ export const ContactForm = () => {
           setEmail('');
           setMessage('');
           setAgreed(false);
-          setShowAlert(false);
+          setValidated(false);
+          setShowModal(true); // Показываем модалку при успехе
+          setActiveModalKey('success'); // Ключ для отображения содержимого модалки
+          setShowModal(true);
         } else {
-          setShowAlert(true);
+          alert('Произошла ошибка при отправке. Попробуйте позже!');
         }
       })
-      .catch(() => setShowAlert(true));
+      .catch(() => {
+        alert('Ошибка сети. Попробуйте позже!');
+      });
   };
+      
 
   return (
-  
-    <div className={styles.container}>
+    <section className={styles.container} id="contactForm">
+
         <h6>Оставьте свои контактные данные и мы свяжемся с Вами в кратчайшие сроки!</h6>
         
-        <Form onSubmit={onSubmit} className={`${styles.form}`}>
+        <Form 
+            noValidate
+            ref={formRef}
+            onSubmit={onSubmit} 
+            className={`${styles.form} ${validated ? 'was-validated' : ''}`}>
           <Form.Group controlId="formGridName" className="d-flex justify-content-between align-items-center">
           <Form.Label className={`text-end ${styles.label}`}>Ваше имя:</Form.Label>
           <Form.Control
@@ -66,6 +85,7 @@ export const ContactForm = () => {
             required
             className={`form-control-sm ${styles.input}`}
           />
+          
         </Form.Group>
 
         <Form.Group controlId="formGridEmail" className="d-flex justify-content-between align-items-center">
@@ -77,11 +97,13 @@ export const ContactForm = () => {
             required
             className={`form-control-sm ${styles.input}`}
           />
+         
         </Form.Group>
 
       <Form.Group className="d-flex justify-content-between align-items-center" controlId="exampleForm.ControlTextarea1">
         <Form.Label className={styles.label}>Сообщение:</Form.Label>
         <Form.Control
+          required
           as="textarea"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -93,41 +115,38 @@ export const ContactForm = () => {
 
       <Form.Group className="text-start" id="formGridCheckbox">
         <Form.Check
+            required
             type="checkbox"
             className={styles.checkbox}
             checked={agreed}
             onChange={(e) => setAgreed(e.target.checked)}
+            isInvalid={!agreed && validated} // ручная проверка
             label={
               <span>
-                Я согласен с{' '}
+                Я согласен/согласна с{' '}
                 <span className={styles.link} role="button" onClick={() => handleShowModal('privacy')}>
                   политикой конфиденциальности
                 </span>{' '}
                 и даю{' '}
                 <span className={styles.link} role="button" onClick={() => handleShowModal('consent')}>
-                  согласие на обработку персональных данных
+                  согласие на обработку персональных данных.
                 </span>{' '}
-                в соответствии с{' '}
-                <span className={styles.link} role="button" onClick={() => handleShowModal('terms')}>
-                  правилами пользования сайтом
-                </span>.
               </span>
             }
           />
-      </Form.Group>
+          
+       </Form.Group>
 
-      {showAlert && (
-        <Alert variant="danger">Пожалуйста, согласитесь с политикой конфиденциальности.</Alert>
-      )}
+        <button type="submit" className="btnMain">
+          ОТПРАВИТЬ СООБЩЕНИЕ
+        </button>
 
-  <button type="submit" className="btnMain">
-    ОТПРАВИТЬ СООБЩЕНИЕ
-  </button>
+      <ModalOverlay 
+          show={showModal} 
+          onClose={() => setShowModal(false)} 
+          activeKey={activeModalKey} />
 
-      <ModalOverlay show={showModal}
-                    onClose={() => setShowModal(false)}
-                    activeKey={activeModalKey} />
       </Form>
-      </div>
+      </section>
   );
 };

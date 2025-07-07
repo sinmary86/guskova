@@ -6,7 +6,6 @@
 
   a {
     color: black;
-    font-size: 18px;
 
     &:hover {
       text-decoration: underline;
@@ -15,12 +14,35 @@
 
   .copyright {
     font-weight: 400;
-    font-size: 22px;
+    text-align: start;
+    font-size: 24px;
+    padding-bottom: $gap-16;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   .quote {
     font-family: $font-deco;
-    font-size: 60px;
+    width: 75%;
+    font-size: 90px;
     color: $text-color;
+    padding-bottom: $gap-32;
+    text-align: center;
+
+     @media (max-width: 768px) {
+      font-size: 60px;
+      width: 90%;
+    }
+  }
+
+   @media (max-width: 768px) {
+      padding: $gap-16 $gap-32;
+    }
+
+    
+  @media (max-width: 468px) {
+    padding: $gap-16 $gap-32;
   }
 }

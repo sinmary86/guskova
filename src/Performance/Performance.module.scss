@@ -1,9 +1,9 @@
 @use '../styles/vars.scss' as *;
 
 .aboutSection {
-  background-color: $secondary-color;
   padding: calc($gap-64 + 2.5rem) $gap-64 $gap-64 $gap-64;
   scroll-margin-top: $gap-64;
+  background-color: $secondary-color;
 
   @media (max-width: 768px) {
     scroll-margin-top: $gap-32;

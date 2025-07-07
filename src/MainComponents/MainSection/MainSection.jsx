@@ -5,6 +5,15 @@ import '../../styles/button.scss';
 
 
 export const MainSection = () => {
+
+   const moveToContactForm = () => {
+    const contactSection = document.getElementById('contactForm');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
     return(
       <section id="mainSection" className={styles.mainSection}>
             <div className={styles.contentContainer}> 
@@ -18,8 +27,8 @@ export const MainSection = () => {
                 ГУСЬКОВА
             </h1>
 
-            <button className="btnMain btnMain--fullWidth">ЗАКАЗАТЬ ВЫСТУПЛЕНИЕ</button>
+            <button className="btnMain" onClick={moveToContactForm}>ЗАКАЗАТЬ ВЫСТУПЛЕНИЕ</button>
         </div>
         </section>
     )
-}
+  }
