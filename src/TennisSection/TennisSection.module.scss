@@ -60,9 +60,8 @@
 .header {
   padding-bottom: $gap-8;
 
-  
   @media (max-width: 768px) {
-    padding: $gap-8 0 $gap-16 0;
+    padding: $gap-16 0 $gap-8 0;
   }
 
 }

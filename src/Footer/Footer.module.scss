@@ -10,7 +10,7 @@
     }
 
     @media (max-width: 468px) {
-      padding: $gap-16;
+      padding: $gap-32 $gap-16 $gap-16 $gap-16;
     }
 
   a {
