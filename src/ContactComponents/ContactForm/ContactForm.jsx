@@ -69,7 +69,7 @@ export const ContactForm = () => {
   return (
     <section className={styles.container} id="contactForm">
 
-        <h6>Оставьте свои контактные данные и мы свяжемся с Вами в кратчайшие сроки!</h6>
+        <h6>Оставьте Ваши контактные данные и мы свяжемся с Вами в кратчайшие сроки!</h6>
         
         <Form 
             noValidate
