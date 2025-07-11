@@ -1,4 +1,4 @@
-@use '../styles/vars.scss' as *;
+@use './vars.scss' as *;
 @use 'sass:color';
 
 .btnMain {
@@ -66,9 +66,13 @@
     background-color 0.3s ease,
     box-shadow 0.3s ease;
 
-
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    height: 25px;
+    width: 20px;
   }
 }
 

@@ -53,8 +53,8 @@ export const ContactForm = () => {
           setMessage('');
           setAgreed(false);
           setValidated(false);
-          setShowModal(true); // Показываем модалку при успехе
-          setActiveModalKey('success'); // Ключ для отображения содержимого модалки
+          setShowModal(true); 
+          setActiveModalKey('success'); 
           setShowModal(true);
         } else {
           alert('Произошла ошибка при отправке. Попробуйте позже!');

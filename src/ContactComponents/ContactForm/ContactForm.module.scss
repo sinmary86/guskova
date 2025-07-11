@@ -34,18 +34,6 @@
   }
  }
 
- .formGroup {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: $gap-16;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 .link {
   text-decoration: underline;
   cursor: pointer;
