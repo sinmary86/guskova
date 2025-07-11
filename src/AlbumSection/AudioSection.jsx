@@ -1,8 +1,9 @@
 import Slider from 'react-slick';
 import { audios } from './audioData';
-import { PlayCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 import { useRef } from 'react';
 import styles from './AudioSection.module.scss';
+import arrow from '../assets/icon-arrow.png';
 
 export const AudioSection = () => {
 
@@ -38,13 +39,13 @@ export const AudioSection = () => {
                 className="arrowsBtn"
                 onClick={() => sliderRef.current?.slickPrev()}
               >
-                <ChevronLeft/>
+                <img src={arrow} alt="Назад" className="arrow-left" />
               </button>
               <button
                 className="arrowsBtn"
                 onClick={() => sliderRef.current?.slickNext()}
               >
-                <ChevronRight />
+                <img src={arrow} alt="Вперед" className="arrow-right" />
               </button>
             </div>
 

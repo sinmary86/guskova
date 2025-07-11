@@ -76,8 +76,8 @@ export const ContactForm = () => {
             ref={formRef}
             onSubmit={onSubmit} 
             className={`${styles.form} ${validated ? 'was-validated' : ''}`}>
-          <Form.Group controlId="formGridName" className="d-flex justify-content-between align-items-center">
-          <Form.Label className={`text-end ${styles.label}`}>Ваше имя:</Form.Label>
+          <Form.Group controlId="formGridName" className="d-flex justify-content-end align-items-end">
+          <Form.Label className={styles.label}>Ваше имя:</Form.Label>
           <Form.Control
             type="text"
             value={name}
@@ -88,7 +88,7 @@ export const ContactForm = () => {
           
         </Form.Group>
 
-        <Form.Group controlId="formGridEmail" className="d-flex justify-content-between align-items-center">
+        <Form.Group controlId="formGridEmail" className="d-flex justify-content-end align-items-end">
           <Form.Label className={styles.label}>Ваш email:</Form.Label>
           <Form.Control
             type="email"
@@ -100,14 +100,13 @@ export const ContactForm = () => {
          
         </Form.Group>
 
-      <Form.Group className="d-flex justify-content-between align-items-center" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className="d-flex justify-content-between align-items-end" controlId="exampleForm.ControlTextarea1">
         <Form.Label className={styles.label}>Сообщение:</Form.Label>
         <Form.Control
           required
           as="textarea"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          rows={3}
           className={`form-control-sm ${styles.input}`}
           style={{ backgroundColor: 'transparent' }}
         />

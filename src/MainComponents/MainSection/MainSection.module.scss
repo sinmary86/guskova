@@ -2,6 +2,7 @@
 
 .mainSection {
   height: 100vh;
+  scroll-margin-top: $gap-64;
 
   background-image: url('../../assets/mainCover.jpg');
   background-size: cover;
@@ -12,6 +13,7 @@
   justify-content: flex-end;
   align-items: center;
   
+
 
   @media (max-width: 768px) {
     height: auto;

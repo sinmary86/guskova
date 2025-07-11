@@ -3,6 +3,7 @@ import { videos } from './videosData';
 import { PlayCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './VideoSection.module.scss';
 import { useRef } from 'react';
+import arrow from '../assets/icon-arrow.png';
 
 export const VideoSection = () => {
   
@@ -42,14 +43,14 @@ export const VideoSection = () => {
             className="arrowsBtn"
             onClick={() => sliderRef.current?.slickPrev()}
             >
-            <ChevronLeft/>
+             <img src={arrow} alt="Назад" className="arrow-left" />
           </button>
 
           <button
             className="arrowsBtn"
             onClick={() => sliderRef.current?.slickNext()}
             >
-            <ChevronRight/>
+            <img src={arrow} alt="Вперед" />
           </button>
       </div>
 
@@ -71,7 +72,6 @@ export const VideoSection = () => {
           >
             <PlayCircle className="playBtn" />
           </a>
-        {/* <h4 className="mt-5">Видеоклип "{video.title}"</h4> */}
       </div>
       </div>
   ))}

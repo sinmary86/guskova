@@ -59,36 +59,16 @@
   background-color: transparent;
   padding: 0;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
 
   transition:
     transform 0.3s ease,
     background-color 0.3s ease,
     box-shadow 0.3s ease;
 
-  svg {
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: transform 0.3s ease;
-  }
 
   &:hover {
     transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
-    svg {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-
-  @media (max-width: 340px) {
-    svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
   }
 }
 
@@ -102,4 +82,8 @@
   &:hover {
     transform: scale(1.2);
   }
+}
+
+.arrow-left {
+  transform: rotate(180deg); 
 }

@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $secondary-color;
-  padding: $gap-16 $gap-64;
+  padding: $gap-32 $gap-64;
 
   
     @media (max-width: 768px) {
@@ -35,9 +35,8 @@
   .quote {
     font-family: $font-deco;
     width: 75%;
-    font-size: 90px;
+    font-size: 80px;
     color: $text-color;
-    padding-bottom: $gap-32;
     text-align: center;
 
      @media (max-width: 768px) {

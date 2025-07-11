@@ -1,7 +1,7 @@
 import styles from './ContactInfo.module.scss';
-import VK from '../../assets/VCIcon.png';
-import telegram from '../../assets/telegramIcon.png';
-import dzen from '../../assets/dzenIcon.png';
+import VK from '../../assets/vk-icon.svg';
+import telegram from '../../assets/telegram-icon.svg';
+import dzen from '../../assets/yandex-dzen-icon.svg';
 
 
 export const ContactInfo = () => {
@@ -48,7 +48,7 @@ export const ContactInfo = () => {
             rel="noopener noreferrer"
             className={styles.link}
         >
-            <img src={dzen} alt="Дзен" className={styles.icon} />
+            <img src={dzen} alt="Яндекс музыка" className={styles.icon} />
             nadezdaguskova
         </a>
         </div> 
