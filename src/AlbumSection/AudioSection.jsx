@@ -1,6 +1,6 @@
 import Slider from 'react-slick';
 import { audios } from './audioData';
-import { PlayCircle } from 'lucide-react';
+import play from '../assets/play-icon.svg';
 import { useRef } from 'react';
 import styles from './AudioSection.module.scss';
 import arrow from '../assets/icon-arrow.png';
@@ -65,7 +65,7 @@ export const AudioSection = () => {
                   rel="noopener noreferrer"
                   className="position-absolute top-50 start-50 translate-middle"
                   >
-                  <PlayCircle className="playBtn" />
+                  <img src={play} alt="Вперед" className="playBtn" /> 
                   </a>
               </div>
               <h4>{audio.title}</h4>

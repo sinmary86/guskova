@@ -17,7 +17,7 @@ export const ExperienceCircle = () => {
 
         <text className={styles.circleText}>
           <textPath href="#topText" startOffset="0%" textLength="754">
-            • С 2013 ГОДА • ЛЕТ ОПЫТА • С 2013 ГОДА • ЛЕТ ОПЫТА 
+            •&ensp;ЛЕТ&ensp;В&ensp;ШОУ-БИЗНЕСЕ&ensp;•&ensp;ЛЕТ&ensp;В&ensp;ШОУ-БИЗНЕСЕ&ensp;
           </textPath>
         </text>
 

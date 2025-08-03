@@ -20,7 +20,7 @@ export const MainSection = () => {
 
             <div className={styles.headerBlock}>
                 <ExperienceCircle />
-                <h3>Singer</h3>
+                <h3>Певица</h3>
             </div>
 
             <h1>НАДЕЖДА <br />

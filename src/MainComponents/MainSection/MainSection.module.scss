@@ -1,7 +1,7 @@
 @use '../../styles/vars.scss' as *;
 
 .mainSection {
-  height: 100vh;
+  height: calc(100vh - $gap-64);
   scroll-margin-top: $gap-64;
 
   background-image: url('../../assets/mainCover.jpg');

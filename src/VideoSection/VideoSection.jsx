@@ -1,9 +1,9 @@
 import Slider from 'react-slick';
 import { videos } from './videosData';
-import { PlayCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './VideoSection.module.scss';
 import { useRef } from 'react';
 import arrow from '../assets/icon-arrow.png';
+import play from '../assets/play-icon.svg';
 
 export const VideoSection = () => {
   
@@ -26,10 +26,6 @@ export const VideoSection = () => {
     ],
   };
 
-  const getThumbnail = (url) => {
-    const match = url.match(/(?:youtu\.be\/|v=)([^&?/]+)/);
-    return match ? `https://img.youtube.com/vi/${match[1]}/mqdefault.jpg` : '';
-  };
 
   return(
     <section className={styles.section}>
@@ -60,7 +56,7 @@ export const VideoSection = () => {
         <div key={video.id} className={styles.container}>
         <div className="card">
           <img
-            src={getThumbnail(video.url)}
+            src={video.img}
             alt={video.title}
             className="w-100"
           />
@@ -70,9 +66,10 @@ export const VideoSection = () => {
             rel="noopener noreferrer"
             className="position-absolute top-50 start-50 translate-middle"
           >
-            <PlayCircle className="playBtn" />
+           <img src={play} alt="Вперед" className="playBtn" /> 
           </a>
       </div>
+      <h4>{video.title}</h4>
       </div>
   ))}
 </Slider>

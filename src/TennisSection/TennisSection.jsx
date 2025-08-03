@@ -1,5 +1,5 @@
 import styles from './TennisSection.module.scss';
-import tennisCover from '../assets/tennis.png'
+import tennisCover from '../assets/tennis-photo-guskova.jpg'
 
 //TODO - заменить фото
 
