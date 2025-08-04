@@ -1,7 +1,7 @@
 import videoGdeTotam from '../assets/video-gde-to-tam-guskova.jpg';
 import videoDreamsComeTrue from '../assets/video-dreams-come-true-guskova.jpg';
 import videoPapa from '../assets/video-papa-guskova.jpg';
-import videVoblakach from '../assets/video-v-oblakach--guskova.jpg';
+import videVoblakach from '../assets/video-v-oblakach-guskova.jpg';
 
 export const videos = [
   { 
