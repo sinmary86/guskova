@@ -1,5 +1,5 @@
 import styles from './Performance.module.scss';
-import performanceFoto from '../assets/concerts-photo-guskova.jpg';
+import performanceFoto from '../assets/concerts-photo.jpg';
 
 
 export const PerformanceSection = () => {
