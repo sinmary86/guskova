@@ -1,7 +1,7 @@
-import videoGdeTotam from '../assets/video-gde-to-tam.jpg';
-import videoDreamsComeTrue from '../assets/video-dreams-come-true.jpg';
-import videoPapa from '../assets/video-papa.jpg';
-import videVoblakach from '../assets/video-v-oblakach.jpg';
+import videoGdeTotam from '../assets/video-gde-to-tam-guskova.jpg';
+import videoDreamsComeTrue from '../assets/video-dreams-come-true-guskova.jpg';
+import videoPapa from '../assets/video-papa-guskova.jpg';
+import videVoblakach from '../assets/video-v-oblakach--guskova.jpg';
 
 export const videos = [
   { 
@@ -26,5 +26,3 @@ export const videos = [
     img: videVoblakach,
 },
 ];
-
-//убрать title если не использую
