@@ -9,7 +9,7 @@
  }
 
   @media (max-width: 468px) {
-   padding: $gap-4 $gap-16;
+   padding: $gap-8 $gap-16;
  }
 }
 
@@ -37,7 +37,7 @@
     transition: color 0.3s ease;
     padding-right: 0;
     margin-right: 0;
-    color: black;
+    color: $text-color;
     font-family: $font-title;
    
   &:hover,

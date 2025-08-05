@@ -15,30 +15,30 @@
     height: 60vh;
   }
 
+    @media (max-width: 468px) {
+    height: 50vh;
+  }
+
+  @media (max-width: 348px) {
+    height: 40vh;
+  }
+
    .contentContainer {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: $gap-64; 
+    margin: $gap-64; 
 
-    @media (max-width: 992px) {  
-      width: 60%;
-    }
 
     @media (max-width: 768px) {
-      width: 55%;
-      padding: $gap-32;
+      margin: $gap-32;
     }
 
-    @media (max-width: 580px) {
-      width: 60%;
-    }
      @media (max-width: 486px) {
-      padding: $gap-32 $gap-16;
-      width: 55%;
+      margin: $gap-32 $gap-16;
     }
   }
 }

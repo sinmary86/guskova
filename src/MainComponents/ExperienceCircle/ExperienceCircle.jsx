@@ -1,7 +1,6 @@
-import styles from './ExperienceCircle.module.scss';
+import styles from "./ExperienceCircle.module.scss";
 
 export const ExperienceCircle = () => {
-    
   const currentYear = new Date().getFullYear();
   const experienceYears = currentYear - 2013;
 
@@ -22,13 +21,13 @@ export const ExperienceCircle = () => {
         </text>
 
         <text
-            x="150"
-            y="150"
-            textAnchor="middle"
-            className={styles.centerNumber}
-            dy=".33em"
-            >
-            {experienceYears}
+          x="150"
+          y="150"
+          textAnchor="middle"
+          className={styles.centerNumber}
+          dy=".33em"
+        >
+          {experienceYears}
         </text>
       </svg>
     </div>

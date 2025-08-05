@@ -1,22 +1,18 @@
 @use '../../styles/vars.scss' as *;
 
-
  .container {
-     height: 100vh;
      display: flex;
      flex-direction: column;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
      padding: $gap-64 0 $gap-64 $gap-64;
-    
-
+  
     @media (max-width: 768px) {
-      height: auto;
-      padding: $gap-32;
+      padding: $gap-48 $gap-32;
    }
 
-  @media (max-width: 480px) {
-    padding: $gap-32 $gap-16;
+   @media (max-width: 480px) {
+    padding: $gap-32;
   }
  }
 
@@ -45,17 +41,21 @@
 }
 
 .label {
-    min-width: 120px;
+    min-width: 100px;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     line-height: 1;
+
+    @media (max-width: 468px) {
+      min-width: 80px;
+  }
   }
 
 
 .input {
   background-color: transparent !important;
   border: none !important;
-  border-bottom: 1px solid black !important;
+  border-bottom: 1px solid $text-color !important;
   border-radius: 0 !important;
   width: auto !important;
   flex-grow: 1;
@@ -76,7 +76,7 @@
   display: flex;
   align-items: flex-start;
   gap: $gap-16;
-  margin-bottom: $gap-16;
+  margin: $gap-16 0;
 
   input[type='checkbox'] {
     appearance: none;
@@ -84,7 +84,7 @@
     height: 18px;
     border: 1px solid $text-color;
     box-shadow: 0 0 4px rgba(128, 0, 0, 0.6);
-    background-color: white;
+    background-color: $primary-color;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     position: relative;

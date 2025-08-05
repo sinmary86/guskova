@@ -9,8 +9,28 @@
 }
 
 .svg {
-  width: 137px;
-  height: 137px;
+  width: 8.5rem;
+  height: 8.5rem;
+
+  @media (max-width: 960px) {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 5.25rem;;
+    height: 5.25rem;;
+  }
+
+  @media (max-width: 320px) {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 
 .circleText {
@@ -26,26 +46,3 @@
   font-weight: 400;
   font-family: $font-title;
 }
-
-@media (max-width: 768px) {
-  .svg {
-  width: 100px;
-  height: 100px;
-}
-}
-
-@media (max-width: 480px) {
-  .svg {
-  width: 85px;
-  height: 85px;
-}
-}
-
-
-@media (max-width: 320px) {
-  .svg {
-  width: 75px;
-  height: 75px;
-}
-}
-  

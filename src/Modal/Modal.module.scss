@@ -46,7 +46,7 @@
 
 .modalHeaderNoBorder {
   border-bottom: none;
-  padding: 0.5rem 1rem;
+  padding: $gap-8 $gap-16;
   display: flex;
   justify-content: flex-end;
   background: transparent;

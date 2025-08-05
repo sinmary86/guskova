@@ -1,28 +1,27 @@
 @use '../../styles/vars.scss' as *;
 
 .container {
-  height: 100vh;
-  scroll-margin-top: $gap-32;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: $gap-64 0;
   background-color: $accent-color;
   color: $primary-color;
-  gap: $gap-64;
   
   @media (max-width: 768px) {
-    height: auto;
+    padding: $gap-48 $gap-32;
+  }
+
+   @media (max-width: 480px) {
     padding: $gap-32;
-    gap: $gap-32;
   }
 }
 
 .text {
     width: 75%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
     width: 100%;
   }
 }
@@ -37,12 +36,8 @@
     
   @media (max-width: 768px) {
     gap: $gap-16;
-  }
-   
-   @media (max-width: 468px) {
-    gap: $gap-8;
-  }
-   
+    padding: $gap-32;
+  } 
 }
 
   .icon {

@@ -1,6 +1,42 @@
 @use '../styles/vars.scss' as *;
 
-.headerWrapper {
+.float-section {
+  scroll-margin-top: $gap-64;
+  background-color: $secondary-color;
+  padding: calc($gap-64 + 3rem) $gap-64 $gap-64 $gap-64;
+
+   @media (max-width: 1200px) {
+    padding: calc($gap-64 + 2.7rem) $gap-64 $gap-64 $gap-64;
+   }
+
+  @media (max-width: 1092px) {
+    padding: calc($gap-64 + 2.6rem) $gap-64 $gap-64 $gap-64;
+  }
+
+  @media (max-width: 992px) {
+    padding: calc($gap-64 + 2.1rem) $gap-64 $gap-64 $gap-64;
+  }
+
+   @media (max-width: 913px) {
+    padding: calc($gap-64 + 1.9rem) $gap-64 $gap-64 $gap-64;
+  } 
+
+  @media (max-width: 768px) {
+    scroll-margin-top: $gap-32;
+    padding: $gap-32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-32;
+  }
+
+  @media (max-width: 468px) {
+    padding: $gap-16;
+    gap: $gap-16;
+  }
+}
+
+.header-float {
   padding-bottom: $gap-32;
   margin-top: -3rem;
 
@@ -16,17 +52,17 @@
     margin-top: -2.1rem;
   }
 
-   @media (max-width: 860px) {
-    margin-top: -2.1rem;
+   @media (max-width: 913px) {
+    margin-top: -1.9rem;
   } 
 
   @media (max-width: 768px) {
     margin: 0;
-    padding: $gap-16 0 $gap-4 0;
+    padding: $gap-16 0 0 0;
   }
 }
 
-.photoWrapper {
+.photo-float-wrapper {
   float: right;
   position: relative;
   width: 100%;
@@ -92,11 +128,15 @@
   }
 
    @media (max-width: 598px) {
-    max-width: 390px;
+    max-width: 350px;
   }
 
    @media (max-width: 420px) {
-    max-width: 300px;
+    max-width: 270px;
+  }
+
+   @media (max-width: 330px) {
+    max-width: 230px;
   }
 }
 
@@ -128,3 +168,40 @@
         margin: 0 auto;
     }
     }
+
+
+.musik-section {
+  padding-bottom: $gap-64;
+  scroll-margin-top: $gap-64;
+   
+  @media (max-width: 768px) {
+  padding-bottom: $gap-48;
+ }
+
+ @media (max-width: 768px) {
+  padding-bottom: $gap-32;
+ }
+}
+
+.music-container {
+  padding: $gap-20 $gap-64 0 $gap-64;
+  
+  
+  @media (max-width: 768px) {
+  padding: $gap-16 $gap-32 0 $gap-32;
+ }
+}
+
+.header-with-bg {
+  @media (max-width: 768px) {
+    padding: $gap-8;
+  }
+
+  &--top {
+    background: linear-gradient(to top, $primary-color 50%, $secondary-color 50%);
+  }
+
+  &--bottom {
+    background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 50%);
+  }
+}

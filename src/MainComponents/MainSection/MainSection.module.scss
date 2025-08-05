@@ -14,10 +14,12 @@
   align-items: center;
   
 
-
   @media (max-width: 768px) {
-    height: auto;
-    background-position: 100% 30%;
+    height: 70vh;
+  }
+
+   @media (max-width: 480px) {
+    height: 55vh;
   }
 }
 
@@ -31,14 +33,19 @@
   gap: $gap-32;
   margin-right: $gap-64;
 
+  @media (max-width: 900px) {
+    margin-right: $gap-32;
+  }
+
+
   @media (max-width: 768px) {
     margin-right: $gap-16;
-    gap: $gap-16;
-    padding: $gap-32 0;
+    gap: $gap-24;
+    padding: $gap-64 0;
   }
 
   @media (max-width: 468px) {
-    padding: $gap-32;
+    padding: $gap-40;
 
   }
 }
@@ -48,7 +55,7 @@
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
   }

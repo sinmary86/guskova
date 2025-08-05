@@ -9,12 +9,8 @@
       padding: $gap-32;
     }
 
-    @media (max-width: 468px) {
-      padding: $gap-32 $gap-16 $gap-16 $gap-16;
-    }
-
   a {
-    color: black;
+    color: $text-color;
 
     &:hover {
       text-decoration: underline;
@@ -24,7 +20,7 @@
   .copyright {
     font-weight: 400;
     text-align: start;
-    font-size: 24px;
+    font-size: $font-size-24;
     padding-bottom: $gap-16;
 
     @media (max-width: 768px) {
@@ -49,5 +45,4 @@
     padding: $gap-16 0;
   }
   }
-  
 }
