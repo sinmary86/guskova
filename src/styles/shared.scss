@@ -26,13 +26,9 @@
     padding: $gap-32;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: $gap-32;
-  }
-
-  @media (max-width: 468px) {
-    padding: $gap-16;
-    gap: $gap-16;
+    gap: $gap-20;
   }
 }
 
@@ -58,7 +54,7 @@
 
   @media (max-width: 768px) {
     margin: 0;
-    padding: $gap-16 0 0 0;
+    padding: 0;
   }
 }
 
