@@ -38,7 +38,12 @@
     }
 
      @media (max-width: 486px) {
+      width: 55%;
       margin: $gap-32 $gap-16;
+    }
+
+    @media (max-width: 352px) {
+      width: 50%;
     }
   }
 }

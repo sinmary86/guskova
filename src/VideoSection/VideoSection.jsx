@@ -26,7 +26,7 @@ export const VideoSection = () => {
 
   return (
     <section className="musik-section">
-      <div className="header-with-bg header-with-bg--bottom">
+      <div className="header-bg-bottom">
         <h2>ВИДЕО И КЛИПЫ</h2>
       </div>
 

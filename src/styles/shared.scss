@@ -110,7 +110,7 @@
     max-width: 500px;
     float: none;
     order: 3;
-    margin: $gap-32 auto $gap-16 auto;
+    margin: $gap-32 auto $gap-8 auto;
     
 
     &::before {
@@ -189,16 +189,10 @@
  }
 }
 
-.header-with-bg {
-  @media (max-width: 768px) {
-    padding: $gap-8;
-  }
-
-  &--top {
+.header-bg-top {
     background: linear-gradient(to top, $primary-color 50%, $secondary-color 50%);
   }
 
-  &--bottom {
+ .header-bg-bottom {
     background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 50%);
   }
-}

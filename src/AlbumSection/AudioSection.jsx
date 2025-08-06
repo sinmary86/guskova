@@ -34,7 +34,7 @@ export const AudioSection = () => {
 
   return (
     <section id="audioSection" className="musik-section">
-      <div className="header-with-bg header-with-bg--top">
+      <div className="header-bg-top">
         <h2>ТОП ПЕСЕН</h2>
       </div>
 

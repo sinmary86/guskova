@@ -6,7 +6,7 @@
 }
 
 .successModal {
-  background-image: url('../assets/alertCover.png');
+  background-image: url('../assets/music-notes-bg-alert.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: $gap-32;
@@ -28,19 +28,24 @@
     color: $primary-color;
     display: flex;
     flex-direction: column;
-    gap: $gap-32;
-    padding: $gap-32 $gap-64; 
+    gap: $gap-16;
+    padding: $gap-64 $gap-32; 
     width: fit-content;
     margin: 0 auto;
     z-index: 1;
 
      @media (max-width: 768px) {
-     padding: $gap-16 $gap-32;
+     padding: $gap-32 $gap-16;
   }
 
   @media (max-width: 468px) {
-    padding: $gap-8 $gap-16;
+    padding: $gap-24 $gap-8;
   }
+  }
+
+   @media (max-width: 468px) {
+     max-width: 90% !important;
+     width: 90%;
   }
 }
 
